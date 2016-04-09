@@ -1,11 +1,11 @@
 'use strict';
 
 App.factory('UserService', ['$http', '$q', function($http, $q){
-
+var url=url+'';
 	return {
 		
 			fetchAllUsers: function() {
-					return $http.get('https://finance-2016.herokuapp.com/user/')
+					return $http.get(url+'/user/')
 							.then(
 									function(response){
 										return response.data;
@@ -18,7 +18,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 		    createUser: function(user){
-					return $http.post('https://finance-2016.herokuapp.com/user/', user)
+					return $http.post(url+'/user/', user)
 							.then(
 									function(response){
 										return response.data;
@@ -31,7 +31,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 		    },
 		    
 		    updateUser: function(user, id){
-					return $http.put('https://finance-2016.herokuapp.com/user/'+id, user)
+					return $http.put(url+'/user/'+id, user)
 							.then(
 									function(response){
 										return response.data;
@@ -44,7 +44,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 			deleteUser: function(id){
-					return $http.delete('https://finance-2016.herokuapp.com/user/'+id)
+					return $http.delete(url+'/user/'+id)
 							.then(
 									function(response){
 										return response.data;
