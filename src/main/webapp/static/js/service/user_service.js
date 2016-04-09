@@ -5,7 +5,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 	return {
 		
 			fetchAllUsers: function() {
-					return $http.get($location.$$absUrl+'/user/')
+					return $http.get('https://finance-2016.herokuapp.com/Finance/user/')
 							.then(
 									function(response){
 										return response.data;
@@ -18,7 +18,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 		    createUser: function(user){
-					return $http.post($location.$$absUrl+'/user/', user)
+					return $http.post('https://finance-2016.herokuapp.com/Finance/user/', user)
 							.then(
 									function(response){
 										return response.data;
@@ -31,7 +31,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 		    },
 		    
 		    updateUser: function(user, id){
-					return $http.put($location.$$absUrl+'/user/'+id, user)
+					return $http.put('https://finance-2016.herokuapp.com/Finance/user/'+id, user)
 							.then(
 									function(response){
 										return response.data;
@@ -44,7 +44,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 			deleteUser: function(id){
-					return $http.delete($location.$$absUrl+'/user/'+id)
+					return $http.delete('https://finance-2016.herokuapp.com/Finance/user/'+id)
 							.then(
 									function(response){
 										return response.data;
