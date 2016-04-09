@@ -5,7 +5,7 @@ var url=url+'';
 	return {
 		
 			fetchAllUsers: function() {
-					return $http.get(url+'/user/')
+					return $http.get(/user/')
 							.then(
 									function(response){
 										return response.data;
