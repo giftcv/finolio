@@ -1,11 +1,11 @@
 'use strict';
 
 App.factory('UserService', ['$http', '$q', function($http, $q){
-var url='https://credebit.herokuapp.com/';
+
 	return {
 		
 			fetchAllUsers: function() {
-					return $http.get(url+'/user/')
+					return $http.get('/user/')
 							.then(
 									function(response){
 										return response.data;
