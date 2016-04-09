@@ -18,7 +18,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 		    createUser: function(user){
-					return $http.post(url+'/user/', user)
+					return $http.post('/user/', user)
 							.then(
 									function(response){
 										return response.data;
@@ -31,7 +31,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 		    },
 		    
 		    updateUser: function(user, id){
-					return $http.put(url+'/user/'+id, user)
+					return $http.put('/user/'+id, user)
 							.then(
 									function(response){
 										return response.data;
@@ -44,7 +44,7 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 			},
 		    
 			deleteUser: function(id){
-					return $http.delete(url+'/user/'+id)
+					return $http.delete('/user/'+id)
 							.then(
 									function(response){
 										return response.data;
